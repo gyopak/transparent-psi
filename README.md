@@ -61,6 +61,7 @@ $ pm2 start frontend.sh
 
 - `[GET] /` returns a new user object that contains a user id based on [`uuid`](https://www.npmjs.com/package/uuid)    
     - example response:
+    
         ```
         {
             "id":"1960c7da-609d-48f3-a8d0-7e9c45cd7196",
@@ -68,6 +69,18 @@ $ pm2 start frontend.sh
             "side":"left"
         }
         ```
+
+- `[GET] /ping/:erotic/:nonErotic` returns a new user object that contains a user id and a random number between 0 and [erotic] or [non-erotic]   
+    - example response:
+    
+        ```
+        {
+            "id":"1960c7da-609d-48f3-a8d0-7e9c45cd7196",
+            "picType": "nonErotic",
+            "picNumber": 6
+        }
+        ```
+
 - `[POST] /` receive a post request with the actual user data and start the saving job
     - example request body based on the [wrapper object](wrapper_object.md)
     - example response is the same as request, so the frontend can check if the save was successful and the  request data is untouched
@@ -78,6 +91,7 @@ $ pm2 start frontend.sh
         - `mm`
         - `mf`
     - example response:
+
         ```
         {
             "status": "ok",
@@ -89,8 +103,10 @@ $ pm2 start frontend.sh
                 ]
         }
         ```
+
 - `[GET] /langs` returns the available languages    
     - example response:
+    
         ```
         {
             "status": "ok",
@@ -101,15 +117,33 @@ $ pm2 start frontend.sh
                 ]
         }
         ```
+
 - `[GET] /lang/:lang` returns the selected language package
     - example response:
+    
         ```
         {
             "status": "ok",
             "lang": {
                 "headerText": "Transparent Psi Project",
-                ...
+                "otherTexts": "example"
             }
+        }
+        ```
+
+- `[GET] /checkId/:labId/:expId` returns if the given laboratory id and experimenter id is correct (is in the database)
+    - example response:
+    
+        ```
+        {
+            "status" :"ok",
+            "valid":
+                {
+                    "labId":"labIdTest",
+                    "expId":"expIdTest",
+                    "labScore":"2",
+                    "expScore":"1"
+                }
         }
         ```
 
