@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is an application that supports psychological studies with data protection, where no data can be removed or changed from the database to modify the output of the study result. Data are collected via a central data collection framework implemented in JavaScript using the node.js framework. This serves the study code to clients, collects responses, and forwards the data to a remote git repository for archival. It is built fully from open source components, and the code will be provided for review at the end of the study.
+This is an application that supports psychological studies with data protection, where no data can be removed or changed from the database to modify the output of the study result. Data are collected via a central data collection framework implemented in JavaScript using the node.js framework. This serves the study code to clients, collects responses, and forwards the data to a remote git repository for archival. It is built fully from open source components, and the code will be provided for review at the end of the study. For security reasons, the application updates it's own source code from the git repository's remote master branch in every 5 minutes.
 
 - **The frontend** handles user interactions (via HTML event listeners) like: inputs, selectable answers and key controls. It gets the available languages from the backend and loads the selected one. After every user interaction it sends a push request to the backend with a user data [wrapper object](wrapper_object.md).
 
