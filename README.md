@@ -8,6 +8,18 @@ This is an application that supports psychological studies with data protection,
 
 - **The backend** fetches the available languages from a [github repository](https://github.com/gy0p4k/transparent-psi-languages) and updates the fronted with it. It also accepts the endpoint calls from the frontend, store the user object in a local git repository and pushes it to github realtime. In github all the rows are public and stored in a [csv file](https://github.com/gy0p4k/transparent-psi-results/blob/master/results.csv).
 
+## Software requirements
+
+- The newest version of a modern browser (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge) with enabled JavaScript
+- Internet access
+- Tested on: 
+    - Chrome 68.0.3440.84 (Windows 10 built 1703 - 64 bit)
+    - Mozilla Firefox 61.0.2 (Windows 10 built 1703 - 64bit)
+    - Mozilla Firefox 60.0 (Linux x86_64)
+    - Mozilla Firefox 60.0 (Mac OsX High Sierra – 64 bit)
+    - Chrome v60.0.3112.113 (Mac OsX High Sierra – 64 bit)
+    - Safari 11 (Mac OsX High Sierra – 64 bit)
+
 ## Technologies, resources
 
 ### Frontend
